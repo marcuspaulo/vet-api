@@ -1,0 +1,158 @@
+{
+	"info": {
+		"_postman_id": "a12ca95c-f263-4d29-bdb7-48bcb3fdc393",
+		"name": "Vet",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "1192286"
+	},
+	"item": [
+		{
+			"name": "List Questions",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/questions",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"questions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add new Question",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"description\": \"O Pet vomitou?\",\n    \"isPreScreening\": true,\n    \"isLast\": false,\n    \"order\": 102,\n    \"nextQuestion\": 0,\n    \"answers\": [\n        {\n            \"description\": \"Sim\",\n            \"value\": true    \n        },\n        {\n            \"description\": \"Não\",\n            \"value\": false    \n        }\n    ] \n    \n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/questions",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"questions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User Anwser",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"userId\":  1,\n    \"questionId\": \"62baedd0428c4b7a019e9426\",\n    \"value\": true\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/user/answer",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"user",
+						"answer"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List User Answers",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/user/answer",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"user",
+						"answer"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Survey Begin (Start)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"userId\":  1,\n    \"questionId\": \"62bb5d636eaa9626c722a189\",\n    \"value\": true\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/questions/start",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"questions",
+						"start"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Survey Begin Start 2",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"userId\":  1,\n    \"questionId\": \"62bb62d740f8c26489bda448\",\n    \"value\": true\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/questions/start",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"questions",
+						"start"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
